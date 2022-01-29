@@ -1,0 +1,522 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins' , sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #F0F2F5;
+}
+
+h3{
+    color: rgb(104, 103, 103);
+}
+
+p{
+    color: rgb(121, 120, 120);
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+img{
+    cursor: pointer;
+}
+
+/* nav in header starts hear as nav */
+
+nav{
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    height: 60px;
+    padding: 15px;
+    z-index: 100;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.left-icon , .central-icon , .right-icon{
+    display: flex;
+    align-items: center;
+}
+
+/* setting up search bar */
+.left-icon input{
+    width: 100%;
+    height: 40px;
+    padding: 0px 30px;
+    margin-right: 4px;
+    border: none;
+    border-radius: 18px;
+    background-color: #F0F2F5;
+    background-image: url(./gallery/search.png);
+    background-repeat: no-repeat;
+    background-size: 7%;
+    background-position: 9px 12px;
+}
+
+/* setting up <i> background */
+
+.right-icon > .fas , .fab{
+    width: 3.5vw;
+    height: 6.5vh;
+    background-color: #E4E6EB;
+    border: 1px solid #ccc;
+    border-radius: 150px;
+    padding: 10px;
+}
+
+.right-icon i{
+    margin: 4px;
+}
+
+/* setting up central-icons */
+.central-icon i {
+    padding: 0 20px;
+}
+
+.main-content{
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;   
+}
+
+/* setting up the Left Sidebar */
+
+.left-sidebar , .right-sidebar{ /* also added Right sidebar  */
+    max-height: 90vh;
+    padding: 0px 12px;
+    position: sticky;
+    flex-basis: 25%;
+    overflow-y: scroll;
+}
+
+.link , .adds{ /* also added right-sidebar's adds class which has suggested group in it. */
+    margin-top: 25px;
+    border-bottom: 1px solid #ccc;
+}
+
+#margin-bottom{ /* this is the last anchor tag of link class */
+    margin-bottom: 15px;
+}
+
+.left-sidebar a , .aneeq a{ /* also added contacts links of right sidebar*/
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-decoration: none;
+    color: #050505;
+    font-size: 15px;
+    height: 45px;
+    border-radius: 6px;
+    padding: 6px;
+}
+
+.left-sidebar a:hover , .aneeq a:hover{
+    background-color: rgb(224, 224, 224);
+}
+
+#dp{
+    border-radius: 50%;
+}
+
+.online{
+    position: relative;
+}
+
+.online::after{
+    content: '';
+    width: 7px;
+    height: 7px;
+    position: absolute;
+    background-color: green;
+    border: 2px solid #fff ;
+    border-radius: 50%;
+    top: 0;
+    right: 13px;
+}
+
+.left-sidebar a img , .aneeq a img{ /* also added contacts links images of right sidebar*/
+    width: 28px;
+    margin-right: 18px;
+}
+
+#see{
+    border: none;
+    border-radius: 50%;
+    background-color: #ccc;
+    padding: 4px;
+}
+
+.shortcuts{
+    margin-top: 22px;   
+}
+
+.shortcuts img{
+    border-radius: 4px;
+}
+
+/* setting up the Content Here : this is the main content of the page*/
+
+.content{
+    flex-basis: 47%;
+    position: relative;
+    overflow-y: scroll;
+    max-height: 90vh;
+    padding: 0 10px;
+}
+
+.story-box{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+
+.story{
+    flex-basis: 18%;
+    padding-top: 32%;
+    position: relative;
+    background-image: linear-gradient(transparent , rgba(0,0,0,0.5) ), url(./gallery/profile.jpg);
+    background-position: inherit;
+    background-size: cover;
+    border-radius: 10px;
+    transition: 0.4s;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+}
+
+.story:hover{
+    background-position: top;
+}
+
+.story img{
+    position: absolute;
+    width: 45px;
+    border-radius: 50%;
+    top: 10px;
+    left: 10px;
+    border: 5px solid #1876F2;
+}
+
+.story p{
+    position: absolute;
+    bottom: 1px;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+}
+ /* setting story backgrounds */
+.story1{
+    background-image: linear-gradient(transparent , rgba(0,0,0,0.5) ), url(./gallery/profile.jpg);
+}
+
+.story2{
+    background-image: linear-gradient(transparent , rgba(0,0,0,0.5) ), url(./gallery/Garnet.jpg);
+}
+
+.story3{
+    background-image: linear-gradient(transparent , rgba(0,0,0,0.5) ), url(./gallery/zalmi-story.jpg);
+}
+
+.story4{
+    background-image: linear-gradient(transparent , rgba(0,0,0,0.5) ), url(./gallery/sameen-story.jpg);
+}
+
+.story5{
+    background-image: linear-gradient(transparent , rgba(0,0,0,0.5) ), url(./gallery/SNF.jpg);
+}
+
+.story.story1 img{
+    top: unset;
+    left: 50%;
+    bottom: 40px;
+    transform: translateX(-50%);
+    border: 2px solid #fff;
+    width: 35px;
+}
+
+/* the second div of content: "write post" */
+.creat , .creat-room , .post-container{
+    position: relative;
+    width: 80%;
+    background-color: #fff;
+    margin: auto;
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+    margin-bottom: 15px;
+}
+
+.write-post{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+}
+
+.user-profile img{
+    width: 45px;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.write-post input{
+    width: 100%;
+    height: 40px;
+    padding: 0px 30px;
+    margin-right: 4px;
+    border: none;
+    border-radius: 18px;
+    background-color: #F0F2F5;
+    font-weight: 300;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.write-post input:hover{
+    background-color: rgb(221, 219, 219);
+}
+
+.add-content{
+    display: flex;
+    margin-top: 10px;
+}
+
+.add-content a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: rgb(97, 97, 97);
+    height: 45px;
+    border-radius: 6px;
+    padding: 6px;
+    width: 100%;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.add-content a:hover{
+    background-color: #F0F2F5;
+}
+
+.add-content a img{
+    margin-right: 6px;
+}
+
+.creat-room{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px;
+}
+
+.room{
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    width: 35%;
+    height: 40px;
+    border: 0;
+    border-radius: 30px;
+    padding: 5px 0 0 0;
+    box-shadow: 0 0 4px rgba(114, 177, 250, 0.5);
+}
+
+.room:hover{
+    background-color: #F0F2F5;
+}
+
+.room a{
+    display: flex;
+    text-decoration: none;
+    color: #1876F2;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.room img{
+    margin-right: 5px;
+}
+
+.friends img{
+    width: 45px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.post{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.name h4{
+    margin-top: 4px;
+    margin-bottom: 2px;
+}
+.user a , .like a{
+    display: flex;
+    align-items: center;
+}
+
+.user a img{
+    width: 45px;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #1876F2;
+}
+
+.hashtag{
+    color: #1876F2;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.post-img img{
+    width: 100%;
+}
+
+.description{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+
+.description a , .thumb a{
+    color: rgb(121, 120, 120);
+    text-decoration: none;
+}
+
+.description a:hover , .thumb a:hover{
+    text-decoration: underline;
+}
+
+.like a img{
+    width: 17px;
+    margin-right: 10px;
+}
+
+.share{
+    display: flex;
+}
+
+.share a{
+    padding: 0 4px;
+}
+
+.thumb{
+    display: flex;
+    justify-content: space-around;
+    padding: 12px 0;
+    margin-bottom: 0;
+}
+
+.thumb i{
+    margin-right: 10px;
+}
+
+
+/* setting up the Right Sidebar */
+
+.suggested{
+    position: relative;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 10px 5px;
+    margin-bottom: 15px;
+}
+
+.group{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.group a{
+    display: flex;
+    text-decoration: none;
+    color: #050505;
+    font-size: 15px;
+}
+
+.group img{
+    width: 20px;
+    margin-right: 10px;
+}
+
+#cross{
+    margin-right: 0;
+    margin-left: 10px;
+}
+
+.article{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.article p{
+    margin-bottom: 0;
+}
+
+.suggested div{
+    margin-bottom: 4px;
+}
+
+#suggested-img{
+     width: 225px;
+     border-radius: 6px;
+     box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+.suggested button{
+    width: 212px;
+    height: 40px;
+    background-color: #F0F2F5;
+    color: #050505;
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+/* setting up contacts */
+
+.contacts{
+    margin-top: 15px;
+    border-bottom: 1px solid #ccc;
+}
+
+.contacts img{
+    width: 25px;
+}
+
+/* setting up contact's tittle */
+
+.tittle{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.tittle img{
+    width: 18px;
+    margin-right: 10px;
+}
+
+#no-margin{ /* this is the last img of tittle span "The 3 Dots"*/
+    width: 22px;
+    margin-right: 0;
+}
+
